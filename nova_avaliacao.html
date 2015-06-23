@@ -5,6 +5,51 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <script src="js/jquery.js"></script>
     <script src="js/scripts.js"></script>
+    <style>
+    .alert-message
+    {
+        margin: 20px 0;
+        padding: 20px;
+        border-left: 3px solid #eee;
+    }
+    .alert-message h4
+    {
+        margin-top: 0;
+        margin-bottom: 5px;
+    }
+    .alert-message code
+    {
+        background-color: #fff;
+        border-radius: 3px;
+    }
+    .alert-message-danger
+    {
+        background-color: #fdf7f7;
+        border-color: #d9534f;
+    }
+    .alert-message-danger h4
+    {
+        color: #d9534f;
+    }
+    .alert-message-default
+    {
+        background-color: #EEE;
+        border-color: #B4B4B4;
+    }
+    .alert-message-default h4
+    {
+        color: #000;
+    }
+    .alert-message-notice
+    {
+        background-color: #FCFCDD;
+        border-color: #BDBD89;
+    }
+    .alert-message-notice h4
+    {
+        color: #444;
+    }
+    </style>
   </head>
 
   <body>
@@ -48,20 +93,31 @@
       </div> <!-- row -->
 
       <div class="row">
+        <div class="row">
+          <div class="col-sm-12 col-md-12" id="alert-message">
+            <div class="alert-message alert-message-danger">
+              <h4>Erros no formulário</h4>
+              <p>
+                O campo comentário precisa ser preenchido.
+              </p>
+            </div>
+          </div>
+        </div>
+
         <form class="form-horizontal">
           <fieldset>
           <legend>Avaliar Jogo</legend>
 
           <div class="form-group">
-            <label class="col-md-4 control-label" for="comment">Comentário</label>
-            <div class="col-md-4">
+            <label class="col-md-12 control-label" for="comment">Comentário</label>
+            <div class="col-md-12">
               <textarea class="form-control" id="comment" name="comment"></textarea>
             </div>
           </div>
 
           <div class="form-group">
-            <label class="col-md-4 control-label" for="Nota">Nota</label>
-            <div class="col-md-4">
+            <label class="col-md-12 control-label" for="Nota">Nota</label>
+            <div class="col-md-12">
               <label class="radio-inline" for="Nota-0">
                 <input name="Nota" id="Nota-0" value="1" checked="checked" type="radio">
                 1
@@ -86,8 +142,8 @@
           </div>
 
           <div class="form-group">
-            <label class="col-md-4 control-label" for="button1id"></label>
-            <div class="col-md-8">
+            <label class="col-md-12 control-label" for="button1id"></label>
+            <div class="col-md-12">
               <button id="new-comment" name="new-comment" class="btn btn-success">Avaliar</button>
               <button id="cancel-comment" name="cancel-comment" class="btn btn-danger">Cancelar</button>
             </div>

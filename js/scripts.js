@@ -15,11 +15,12 @@ $(function() {
     e.preventDefault();
   });
 
+  //Fix
   $("#new-comment").click(function(){
     var comment = $('#comment').val()
 
     if(comment == ''){
-      alert('hue')
+      $("#alert-message").css('display', 'block');
     }else{
       location.href = "/jogo.html"
     }
