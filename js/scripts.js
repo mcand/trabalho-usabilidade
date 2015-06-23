@@ -6,6 +6,7 @@ $(function() {
     $(this).addClass('active');
     e.preventDefault();
   });
+
   $('#register-form-link').click(function(e) {
     $("#register-form").delay(100).fadeIn(100);
     $("#login-form").fadeOut(100);
@@ -13,4 +14,14 @@ $(function() {
     $(this).addClass('active');
     e.preventDefault();
   });
+
+  $("#new-comment").click(function(){
+    var comment = $('#comment').val()
+
+    if(comment == ''){
+      alert('hue')
+    }else{
+      location.href = "/jogo.html"
+    }
+  })
 });

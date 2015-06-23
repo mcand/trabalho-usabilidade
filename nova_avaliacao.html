@@ -3,11 +3,8 @@
   <head>
     <title>Jogo</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
-    <style>
-    article h2{ color:#333333; }
-    .margin10{ margin-bottom:10px; margin-right:10px; }
-    </style>
+    <script src="js/jquery.js"></script>
+    <script src="js/scripts.js"></script>
   </head>
 
   <body>
@@ -48,64 +45,57 @@
             </p>
           </article>
         </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-12">
-          <a class="btn btn-primary" href="nova_avaliacao.html">Avaliar jogo</a>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-12">
-          <div class="page-header">
-            <h1><small class="pull-right">3 comments</small> Comments </h1>
-          </div>
-
-          <div class="comments-list">
-            <div class="media">
-              <p class="pull-right"><small>5 estrelas</small></p>
-              <a class="media-left" href="#">
-                <img src="http://lorempixel.com/40/40/people/2/">
-              </a>
-              <div class="media-body">
-                <h4 class="media-heading user_name">Baltej Singh</h4> Wow! this is really great.
-              </div>
-            </div>
-          </div>
-
-          <hr />
-
-          <div class="comments-list">
-            <div class="media">
-              <p class="pull-right"><small>5 estrelas</small></p>
-              <a class="media-left" href="#">
-                <img src="http://lorempixel.com/40/40/people/2/">
-              </a>
-              <div class="media-body">
-                <h4 class="media-heading user_name">Baltej Singh</h4> Wow! this is really great.
-              </div>
-            </div>
-          </div>
-
-          <hr />
-
-          <div class="comments-list">
-            <div class="media">
-              <p class="pull-right"><small>5 estrelas</small></p>
-              <a class="media-left" href="#">
-                <img src="http://lorempixel.com/40/40/people/2/">
-              </a>
-              <div class="media-body">
-                <h4 class="media-heading user_name">Baltej Singh</h4> Wow! this is really great.
-              </div>
-            </div>
-          </div>
-
-          <hr />
-
-        </div> <!-- col md 12 -->
       </div> <!-- row -->
+
+      <div class="row">
+        <form class="form-horizontal">
+          <fieldset>
+          <legend>Avaliar Jogo</legend>
+
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="comment">Comentário</label>
+            <div class="col-md-4">
+              <textarea class="form-control" id="comment" name="comment"></textarea>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="Nota">Nota</label>
+            <div class="col-md-4">
+              <label class="radio-inline" for="Nota-0">
+                <input name="Nota" id="Nota-0" value="1" checked="checked" type="radio">
+                1
+              </label>
+              <label class="radio-inline" for="Nota-1">
+                <input name="Nota" id="Nota-1" value="2" type="radio">
+                2
+              </label>
+              <label class="radio-inline" for="Nota-2">
+                <input name="Nota" id="Nota-2" value="3" type="radio">
+                3
+              </label>
+              <label class="radio-inline" for="Nota-3">
+                <input name="Nota" id="Nota-3" value="4" type="radio">
+                4
+              </label>
+              <label class="radio-inline" for="Nota-4">
+                <input name="Nota" id="Nota-4" value="5" type="radio">
+                5
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="button1id"></label>
+            <div class="col-md-8">
+              <button id="new-comment" name="new-comment" class="btn btn-success">Avaliar</button>
+              <button id="cancel-comment" name="cancel-comment" class="btn btn-danger">Cancelar</button>
+            </div>
+          </div>
+
+          </fieldset>
+        </form>
+      </div>
 
     </div> <!-- container -->
   </body>
